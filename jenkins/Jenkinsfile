@@ -1,7 +1,7 @@
 pipeline {
     agent any
-    options {
-        skipStagesAfterUnstable()
+    tools {
+    maven 'maven-3.9.9' // This must match the name configured in Jenkins → Global Tool Configuration
     }
     stages {
         stage('Build') {
